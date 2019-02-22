@@ -1,0 +1,40 @@
+body, .btn-block {
+    background: #3490dc;
+}
+
+.col-4 {
+    background: white;
+    margin-top: 100px;
+    border-radius: 5px;
+}
+
+input {
+    font-family: monospace;
+    font-size: 25px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 13px;
+}
+input::-moz-placeholder {
+    font-size: 13px;
+}
+input::-ms-input-placeholder {
+    font-size: 13px;
+}
+input::placeholder {
+    font-size: 13px;
+}
+
+h2, a {
+    color: #3490dc;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+.btn-block {
+    color: white;
+}
