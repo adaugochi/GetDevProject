@@ -15,7 +15,11 @@ function Money() {
     amountInEuros.value = Math.floor(amount);
 
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://data.fixer.io/api/latest?access_key=4e85812a1ae88537761694fe399c8229&format=1', true);
+    xhr.open(
+        'GET',
+        'http://data.fixer.io/api/latest?access_key=4e85812a1ae88537761694fe399c8229&format=1',
+        true
+    );
     xhr.onload = function () {
         if(this.status == 200) {
             let euro = document.getElementById('amount_euro').value;

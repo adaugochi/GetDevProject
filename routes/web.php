@@ -23,5 +23,5 @@ Route::get('/register', 'AuthController@register');
 Route::post('/login', 'AuthController@login');
 Route::post('/register/{data}', 'AuthController@create');
 
-Route::get('/home', 'ExpenseController@getExpenses')->middleware('auth');
+Route::get('/home', 'ExpenseController@getExpenses');
 Route::post('/expense', 'ExpenseController@create');

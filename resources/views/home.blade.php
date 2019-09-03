@@ -22,17 +22,20 @@
                             <input type="hidden" name="user_id" id="user_id" value="{{ Auth::user()->id }}">
                             <div class="form-group">
                                 <label for="voe" class="small font-weight-bold">Value of Expense</label>
-                                <input type="text" name="value_of_expense" id="voe" class="form-control form-control-sm" required onkeyup="Money()">
+                                <input type="text" name="value_of_expense" id="voe" class="form-control form-control-sm"
+                                       onkeyup="Money()">
+                                <span id="voeErr" class="small text-danger"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="doe" class="small font-weight-bold">Date of Expense</label>
-                                <input type="datetime-local" name="date_of_expense" id="doe" class="form-control form-control-sm" required>
+                                <input type="datetime-local" name="date_of_expense" id="doe" class="form-control form-control-sm"
+                                       value="{{ old('date_of_expense') }}">
                             </div>
 
                             <div class="form-group">
                                 <label for="amount" class="small font-weight-bold">Amount (EUR)</label>
-                                <input type="text" name="amount_in_euro" id="amount_euro" class="form-control form-control-sm" required>
+                                <input type="text" name="amount_in_euro" id="amount_euro" class="form-control form-control-sm">
                             </div>
 
                             <input type="hidden" name="amount_in_pounds" id="amount_pounds">
@@ -46,7 +49,7 @@
 
                             <div class="form-group">
                                 <label for="reason" class="small font-weight-bold">Reason of Expense</label>
-                                <textarea class="form-control" rows="3" name="reason" required></textarea>
+                                <textarea class="form-control" rows="3" name="reason">{{ old('reason') }}</textarea>
                             </div>
 
                             <button type="submit" class="btn">ADD</button>

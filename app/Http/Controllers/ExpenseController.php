@@ -10,6 +10,11 @@ class ExpenseController extends Controller
 {
     protected $redirectTo = '/home';
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function getExpenses()
     {
         $expenses = Expense::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->get();
