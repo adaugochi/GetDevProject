@@ -24,17 +24,17 @@ class ExpenseController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, [
-            'value_of_expense'=> 'required',
+            'value_of_product'=> 'required',
             'date_of_expense' => 'required',
             'reason'          =>  'required',
         ]);
         $expense = new Expense;
 
         $expense->user_id             = $request->user_id;
-        $expense->value_of_expenses   = $request->value_of_expense;
+        $expense->value_of_expenses   = $request->value_of_product;
         $expense->date_of_expenses    = $request->date_of_expense;
-        $expense->amount_in_euro      = $request->amount_in_euros;
-        $expense->amount_in_pounds    = $request->amount_in_pounds;
+        $expense->amount_in_euro      = $request->amount_euro;
+        $expense->amount_in_pounds    = $request->amount_pound;
         $expense->reason_for_expenses = $request->reason;
         $expense->VAT                 = $request->vat;
 

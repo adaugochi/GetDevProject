@@ -6,8 +6,12 @@
  */
 
 require('./bootstrap');
+import axios from 'axios';
+import VueAxios from 'vue-axios'
 
 window.Vue = require('vue');
+
+Vue.use(VueAxios, axios);
 
 /**
  * The following block of code may be used to automatically register your
@@ -20,7 +24,11 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('data-table', require('./components/DataTableComponent.vue').default);
+Vue.component('add-expense', require('./components/AddExpenseComponent').default);
+Vue.component('modal', require('./components/ModalComponent').default);
+Vue.component('update-expense', require('./components/UpdateExpenseComponent').default);
+Vue.component('form-expense', require('./components/FormComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
