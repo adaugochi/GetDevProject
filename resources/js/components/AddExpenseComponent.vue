@@ -7,7 +7,7 @@
             <form role="form" method="post" action="/expense">
                 <input type="hidden" name="_token" v-model="csrfToken">
                 <input type="hidden" name="user_id" v-model="userId">
-                <FormComponent :is-edit="false"></FormComponent>
+                <FormComponent></FormComponent>
             </form>
         </template>
     </ModalComponent>

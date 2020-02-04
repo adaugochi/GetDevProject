@@ -47,13 +47,7 @@
             }).then((data) => {
                 this.exchangeRates = data.rates
             });
-
-            this.updateDetail()
         },
-        created() {
-
-        },
-        props: ['eachData', 'isEdit'],
         data() {
             return {
                 formData: {
@@ -76,16 +70,6 @@
             },
             getAmountInPound() {
                 return parseFloat(this.formData.amt_pound).toFixed(2);
-            },
-            updateDetail() {
-                if (this.isEdit) {
-                    this.formData.vop = this.eachData.value_of_expenses;
-                    this.formData.amt_eur = this.eachData.amount_in_euro;
-                    this.formData.vat = this.eachData.VAT;
-                    this.formData.amt_pound = this.eachData.amount_in_pounds;
-                    this.formData.reason = this.eachData.reason_for_expenses;
-                    this.formData.date = this.eachData.date_of_expenses;
-                }
             }
         },
         methods: {

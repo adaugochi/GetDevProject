@@ -7,7 +7,6 @@
         </button>
 
         <add-expense :user-id="{{Auth::user()->id}}" csrf-token="{{csrf_token()}}"></add-expense>
-        {{--<update-expense></update-expense>--}}
 
         <div class="row">
             @if (session()->has('success'))
@@ -16,7 +15,7 @@
                     {{ session('success') }}
                 </div>
             @endif
-            <data-table :expenses="{{$expenses}}" :user-id="{{Auth::user()->id}}" csrf-token="{{csrf_token()}}"></data-table>
+            <data-table :expenses="{{$expenses}}"></data-table>
         </div>
     </div>
 @endsection

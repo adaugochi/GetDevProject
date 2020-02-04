@@ -27,7 +27,6 @@ Vue.use(VueAxios, axios);
 Vue.component('data-table', require('./components/DataTableComponent.vue').default);
 Vue.component('add-expense', require('./components/AddExpenseComponent').default);
 Vue.component('modal', require('./components/ModalComponent').default);
-Vue.component('update-expense', require('./components/UpdateExpenseComponent').default);
 Vue.component('form-expense', require('./components/FormComponent').default);
 
 /**
